@@ -18,6 +18,6 @@ void TestCase::print(){
     }
     else
     {
-        cout << "(*) '0 failed'\n \"\n  ==\n  \"\"";
+        cout << "(*) '0 failed'\n\"\n==\n\"\"" <<endl;
     }
 }

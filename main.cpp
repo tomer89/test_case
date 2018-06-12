@@ -70,6 +70,9 @@ int main() {
 		.check_function([](const MyStruct& s){return s.myNum();}, MyStruct(5), 5) // Here there is a bug.
 		.print();
 		
+		
+		
+		TestCase("Test123 int operators", cerr).print();
 		//cout << "checking: " << [](const MyStruct& s){return s.myNum();};
 }
 
