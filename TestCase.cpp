@@ -14,7 +14,7 @@ int TestCase::FAILED = 0;*/
 void TestCase::print(){
 /*    if(FAILED > 0)
     {*/
-        cout << _name <<": "<< to_string(FAILED) << " failed, " << to_string(PASSED) <<" passed, " << to_string(PASSED + FAILED) <<" total." << endl << "---" << endl;
+        _os << _name <<": "<< to_string(FAILED) << " failed, " << to_string(PASSED) <<" passed, " << to_string(PASSED + FAILED) <<" total." << endl << "---" << endl;
 /*    }
     else
     {
