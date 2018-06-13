@@ -35,9 +35,10 @@ class TestCase
     	        ++PASSED;
     	    }
     	    else{
+    	        ++FAILED;
     	        _os << _name << ": Failure in test #" <<std::to_string(PASSED+FAILED) << 
     	        ": "<< y <<" should not equal " << x <<"!" << std::endl;
-    	        ++FAILED;
+    	        
     	    }
     	    return *this;    	    
     	}    
