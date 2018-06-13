@@ -40,7 +40,7 @@ class TestCase
     	    return *this;    	    
     	}    
     	
-    	template <typename A,typename B ,typename C ,typename D>
+/*    	template <typename A,typename B ,typename C ,typename D>
     	TestCase check_function(A (*foo)(const B), C x,D y){
     	    if(foo(x) == y){
     	        ++PASSED;
@@ -52,7 +52,7 @@ class TestCase
     	        << " but returned "<< std::to_string(foo(x)) <<"!" << std::endl;
     	    }
     	    return *this;
-    	}
+    	}*/
     	
     	//Needed this for sending lambda functions:
     	template <typename A ,typename C ,typename D>

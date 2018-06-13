@@ -12,12 +12,12 @@ int TestCase::FAILED = 0;*/
 //this is the only non-template therefore only this I can write in the .cpp file. Template file wouldve needed a clear declaration of what types I am using, if not it wouldve not
 // been able to link the template functions to the func's in the header file.
 void TestCase::print(){
-    if(FAILED > 0)
-    {
+/*    if(FAILED > 0)
+    {*/
         cout << _name <<": "<< to_string(FAILED) << " failed, " << to_string(PASSED) <<" passed, " << to_string(PASSED + FAILED) <<" total." << endl << "---" << endl;
-    }
+/*    }
     else
     {
         cout << "(*) '0 failed'\n\"\n==\n\"\"" <<endl;
-    }
+    }*/
 }
