@@ -6,6 +6,7 @@
 //using namespace std;
 
 
+
 class TestCase
 {
     int PASSED = 0, FAILED = 0;
@@ -16,7 +17,7 @@ class TestCase
         TestCase(std::string str,std::ostream& os):_name(str),_os(os){};
         
         template <typename T>
-    	TestCase check_equal(T x,T y){
+    	TestCase& check_equal(T x,T y){
     	    if(x == y){
     	        ++PASSED;
     	    }
@@ -29,12 +30,13 @@ class TestCase
     	}
     	
         template <typename T>
-    	TestCase check_different(T x,T y){
+    	TestCase& check_different(T x,T y){
     	    if(x != y){
     	        ++PASSED;
     	    }
     	    else{
-    	        _os << _name << std::endl;
+    	        _os << _name << ": Failure in test #" <<std::to_string(PASSED+FAILED) << 
+    	        ": "<< y <<" should not equal " << x <<"!" << std::endl;
     	        ++FAILED;
     	    }
     	    return *this;    	    
@@ -55,8 +57,8 @@ class TestCase
     	}*/
     	
     	//Needed this for sending lambda functions:
-    	template <typename A ,typename C ,typename D>
-    	TestCase check_function(A foo, C x,D y){
+    	template <typename FUN ,typename C ,typename D>
+    	TestCase& check_function(FUN foo, C x,D y){
     	    if(foo(x) == y){
     	        ++PASSED;
     	    }
@@ -72,7 +74,7 @@ class TestCase
 
     	
     	template <typename T>
-    	TestCase check_output(T x, std::string str){
+    	TestCase& check_output(T x, std::string str){
     	    //std::ostringstream os >> x;
 	        std::stringstream os;
             os << x;

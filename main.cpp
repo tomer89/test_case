@@ -1,7 +1,7 @@
 /**
  * A main program for testing the "TestCase" tester.
  */
-
+//TODO check why I get only 52 with Shirbt
 #include <iostream>
 #include <sstream>
 #include <string>
